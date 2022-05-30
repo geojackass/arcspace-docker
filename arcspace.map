@@ -4,8 +4,8 @@ MAP
 
   WEB
     METADATA
-      "wms_title" "geojackass_map"
-      "wms_onlineresource" "http://localhost:8080/?map=/usr/local/share/mapserver/examples/geojackass.map&"
+      "wms_title" "arcspace"
+      "wms_onlineresource" "http://localhost:8080/?map=/usr/local/share/mapserver/examples/arcspace.map&"
       "wms_srs" "EPSG:4326"
       "ows_enable_request" "*"
     END
