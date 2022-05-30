@@ -1,0 +1,47 @@
+MAP
+  # DEBUG 2
+  # CONFIG "MS_ERRORFILE" "/ms4w/tmp/ms_error.txt"
+
+  WEB
+    METADATA
+      "wms_title" "geojackass_map"
+      "wms_onlineresource" "http://localhost:8080/?map=/usr/local/share/mapserver/examples/geojackass.map&"
+      "wms_srs" "EPSG:4326"
+      "ows_enable_request" "*"
+    END
+
+    # IMAGEPATH "/ms4w/tmp/ms_tmp/"
+    # IMAGEURL "/ms_tmp/"
+  END
+
+  # データフォルダを相対パスで指定
+  SHAPEPATH   "data" 
+
+  FONTSET "fonts/fonts.list"
+
+  PROJECTION
+    "init=epsg:4326" # WGS84
+  END
+
+  # IMAGETYPE,SIZEはWMSパラメータで指定するので
+  # ここは意味が無くなる
+  # IMAGETYPE   PNG
+  # IMAGECOLOR  255 255 255
+  # SIZE        500 400
+
+  #月惑星地図shp 本体
+  LAYER 
+    NAME "moon" #layer name
+    DATA moon_wgs84.shp #shp file name
+    STATUS ON
+    TYPE LINE
+
+    CLASS
+      STYLE 
+        COLOR 64 64 64
+        WIDTH 1.0
+      END
+    END
+  END
+
+END 
