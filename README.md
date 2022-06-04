@@ -15,7 +15,7 @@ The HTTP endpoint for the MapServer `mapserv` CGI binary is the root URL at
 `/`. This can be tested by mapping the web server's port `80` on the container
 to port `8080` on the host:
 ```
-# docker run -p 8080:80 geojackass/mapserver-jpltd
+# docker run -p 8080:80 geojackass/arcspace
 ```
 
 ### Setup
